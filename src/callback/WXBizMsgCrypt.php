@@ -1,6 +1,11 @@
 <?php
 namespace WeWorkApi\Callback;
 
+use WeWorkApi\Callback\PKCS7Encoder;
+use WeWorkApi\Callback\XMLParse;
+use WeWorkApi\Callback\SHA1;
+use WeWorkApi\Callback\ErrorCode;
+use WeWorkApi\Callback\Prpcrypt;
 /**
  * 企业微信回调消息加解密示例代码.
  *

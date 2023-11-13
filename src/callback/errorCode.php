@@ -1,4 +1,5 @@
 <?php
+namespace WeWorkApi\Callback;
 
 /**
  * error code 说明.

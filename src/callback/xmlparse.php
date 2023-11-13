@@ -1,4 +1,6 @@
 <?php
+namespace WeWorkApi\Callback;
+
 include_once "errorCode.php";
 
 /**

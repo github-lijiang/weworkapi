@@ -1,4 +1,5 @@
 <?php
+namespace WeWorkApi\Callback;
 
 /**
  * 企业微信回调消息加解密示例代码.

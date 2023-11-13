@@ -1,11 +1,9 @@
 <?php
 namespace WeWorkApi\Callback;
 
-use WeWorkApi\Callback\PKCS7Encoder;
 use WeWorkApi\Callback\XMLParse;
 use WeWorkApi\Callback\SHA1;
 use WeWorkApi\Callback\ErrorCode;
-use WeWorkApi\Callback\Prpcrypt;
 /**
  * 企业微信回调消息加解密示例代码.
  *
@@ -13,10 +11,7 @@ use WeWorkApi\Callback\Prpcrypt;
  */
 
 
-include_once "SHA1.php";
-include_once "XMLParse.php";
 include_once "PKCS7Encoder.php";
-include_once "ErrorCode.php";
 
 class WXBizMsgCrypt
 {

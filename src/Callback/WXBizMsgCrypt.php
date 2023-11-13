@@ -13,10 +13,10 @@ use WeWorkApi\Callback\Prpcrypt;
  */
 
 
-include_once "sha1.php";
-include_once "xmlparse.php";
-include_once "pkcs7Encoder.php";
-include_once "errorCode.php";
+include_once "SHA1.php";
+include_once "XMLParse.php";
+include_once "PKCS7Encoder.php";
+include_once "ErrorCode.php";
 
 class WXBizMsgCrypt
 {

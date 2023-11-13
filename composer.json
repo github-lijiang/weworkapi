@@ -1,0 +1,32 @@
+{
+  "name": "logmecn/weworkapi",
+  "description": "WeWork API SDK, 企业微信接口客户端SDK封装",
+  "keywords": ["logmecn", "weWork"],
+  "version": "1.0.1",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "homepage": "http://www.logme.cn/",
+  "type": "library",
+  "authors": [
+    {
+      "name": "lijiang",
+      "email": "806363493@qq.com",
+      "homepage": "https://github.com/github-lijiang",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-redis": "*",
+    "ext-libxml": "*",
+    "ext-simplexml": "*",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "WeWorkApi\\": "src/"
+    }
+  }
+}

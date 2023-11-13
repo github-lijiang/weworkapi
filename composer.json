@@ -1,7 +1,7 @@
 {
-  "name": "logmecn/weworkapi",
+  "name": "lijiang/weworkapi",
   "description": "WeWork API SDK, 企业微信接口客户端SDK封装",
-  "keywords": ["logmecn", "weWork"],
+  "keywords": ["weWork"],
   "version": "1.0.1",
   "license": "MIT",
   "minimum-stability": "dev",

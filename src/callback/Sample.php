@@ -1,5 +1,6 @@
 <?php
 namespace WeWorkApi\Callback;
+use WeWorkApi\Callback\WXBizMsgCrypt;
 
 include_once "WXBizMsgCrypt.php";
 

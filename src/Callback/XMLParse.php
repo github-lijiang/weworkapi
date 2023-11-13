@@ -1,8 +1,9 @@
 <?php
 namespace WeWorkApi\Callback;
 use WeWorkApi\Callback\ErrorCode;
+use Exception;
+use DOMDocument;
 
-include_once "errorCode.php";
 
 /**
  * XMLParse class

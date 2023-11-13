@@ -1,8 +1,7 @@
 <?php
 namespace WeWorkApi\Callback;
 use WeWorkApi\Callback\ErrorCode;
-
-include_once "ErrorCode.php";
+use Exception;
 
 /**
  * SHA1 class

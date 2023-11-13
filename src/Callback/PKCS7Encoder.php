@@ -2,8 +2,6 @@
 namespace WeWorkApi\Callback;
 use WeWorkApi\Callback\ErrorCode;
 
-include_once "ErrorCode.php";
-
 /**
  * PKCS7Encoder class
  *

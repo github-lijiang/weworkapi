@@ -1367,4 +1367,31 @@ class CorpAPI extends API
         fclose($handle);
         return $tmpPath;
     }
+
+    public function follow_user_list()
+    { 
+        self::_HttpCall(self::GET_FOLLOW_USER_LIST, 'GET', []);
+        return Utils::arrayGet($this->rspJson, "follow_user");
+    }
+
+    public function batch_by_user($userid_list,$cursor = "",$limit =100)
+    { 
+        self::_HttpCall(self::GET_BATCH_BY_USER, 'POST', array(
+            'userid_list'=>$userid_list,
+            'cursor'     =>$cursor,
+            'limit'      =>$limit
+        ));
+        $external_contact_list = Utils::arrayGet($this->rspJson, "external_contact_list");
+        $next_cursor           = Utils::arrayGet($this->rspJson, "next_cursor");
+        return [
+            'external_contact_list' =>$external_contact_list,
+            'next_cursor'           =>$next_cursor,
+        ];
+    }
+
+    public function corp_tag_list()
+    { 
+        self::_HttpCall(self::GET_CORP_TAG_List, 'GET', []);
+        return Utils::arrayGet($this->rspJson, "tag_group");
+    }
 }

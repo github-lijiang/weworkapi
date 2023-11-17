@@ -16,7 +16,7 @@ class UserDetailByUserTicket
 
     static public function Array2UserDetailByUserTicket($arr)
     {
-        $info = null;
+        $info = new UserDetailByUserTicket();
 
         $info->userid = Utils::arrayGet($arr, "userid");
         $info->name = Utils::arrayGet($arr, "name");

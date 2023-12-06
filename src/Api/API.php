@@ -89,6 +89,7 @@ abstract class API
     const GET_FOLLOW_USER_LIST  = '/cgi-bin/externalcontact/get_follow_user_list?access_token=ACCESS_TOKEN';
     const GET_BATCH_BY_USER     = '/cgi-bin/externalcontact/batch/get_by_user?access_token=ACCESS_TOKEN';
     const GET_CORP_TAG_List     = '/cgi-bin/externalcontact/get_corp_tag_list?access_token=ACCESS_TOKEN';
+    const GET_EXTERNAL_CONTACT  = '/cgi-bin/externalcontact/get?access_token=ACCESS_TOKEN';
 
     protected function GetAccessToken() { }
     protected function RefreshAccessToken() { }

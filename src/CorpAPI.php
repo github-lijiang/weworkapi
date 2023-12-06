@@ -1394,4 +1394,17 @@ class CorpAPI extends API
         self::_HttpCall(self::GET_CORP_TAG_List, 'GET', []);
         return Utils::arrayGet($this->rspJson, "tag_group");
     }
+
+    public function get_external_contact($external_userid,$cursor = "")
+    { 
+        self::_HttpCall(self::GET_EXTERNAL_CONTACT, 'GET', [
+            'external_userid'=>$external_userid,
+            'cursor'         =>$cursor
+        ]);
+        return [
+            'external_contact' =>Utils::arrayGet($this->rspJson, "external_contact"),
+            'follow_user'      =>Utils::arrayGet($this->rspJson, "follow_user"),
+            'next_cursor'      =>Utils::arrayGet($this->rspJson, "next_cursor"),
+        ];
+    }
 }

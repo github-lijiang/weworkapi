@@ -1407,4 +1407,50 @@ class CorpAPI extends API
             'next_cursor'      =>Utils::arrayGet($this->rspJson, "next_cursor"),
         ];
     }
+
+    public function add_contact_way($params)
+    { 
+        self::_HttpCall(self::ADD_CONTACT_WAY, 'POST', $params);
+        return [
+            'config_id' =>Utils::arrayGet($this->rspJson, "config_id"),
+            'qr_code'   =>Utils::arrayGet($this->rspJson, "qr_code"),
+        ];
+    }
+
+    public function update_contact_way($params)
+    { 
+        self::_HttpCall(self::ADD_CONTACT_WAY, 'POST', $params);
+        return [
+            'config_id' =>Utils::arrayGet($this->rspJson, "config_id"),
+            'qr_code'   =>Utils::arrayGet($this->rspJson, "qr_code"),
+        ];
+    }
+
+    public function convert_to_userid($params)
+    { 
+        
+        self::_HttpCall(self::CONVERT_TO_USERID, 'POST', $params);
+        return [
+            'userid_list' =>Utils::arrayGet($this->rspJson, "userid_list"),
+            'invalid_open_userid_list'   =>Utils::arrayGet($this->rspJson, "invalid_open_userid_list"),
+        ];
+    }
+
+
+    public function userid_to_openuserid($params)
+    { 
+        self::_HttpCall(self::USERID_TO_OPENUSERID, 'POST', $params);
+        return [
+            'open_userid_list'      =>Utils::arrayGet($this->rspJson, "open_userid_list"),
+            'invalid_userid_list'   =>Utils::arrayGet($this->rspJson, "invalid_userid_list"),
+        ];
+    }
+    
+    public function get_new_external_userid($params)
+    { 
+        self::_HttpCall(self::GET_NEW_EXTERNAL_USERID, 'POST', $params);
+        return [
+            'items'      =>Utils::arrayGet($this->rspJson, "items"),
+        ];
+    }
 }

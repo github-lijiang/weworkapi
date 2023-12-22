@@ -1448,7 +1448,7 @@ class CorpAPI extends API
     
     public function get_new_external_userid($params)
     { 
-        self::_HttpCall(self::GET_NEW_EXTERNAL_USERID, 'POST', $params);
+        self::_HttpCall(self::NEW_EXTERNAL_USERID, 'POST', $params);
         return [
             'items'      =>Utils::arrayGet($this->rspJson, "items"),
         ];

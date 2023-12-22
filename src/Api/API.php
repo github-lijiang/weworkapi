@@ -99,7 +99,7 @@ abstract class API
     const CONVERT_TO_USERID     = '/cgi-bin/user/convert_to_userid?access_token=ACCESS_TOKEN';
     const DEP_SIMPLE_LIST       = '/cgi-bin/department/simplelist?access_token=ACCESS_TOKEN';
     const USERID_TO_OPENUSERID  = '/cgi-bin/batch/userid_to_openuserid?access_token=ACCESS_TOKEN';
-    const GET_NEW_EXTERNAL_USERID = '/cgi-bin/externalcontact/get_new_external_userid?access_token=ACCESS_TOKEN';
+    const NEW_EXTERNAL_USERID   = '/cgi-bin/externalcontact/get_new_external_userid?access_token=ACCESS_TOKEN';
 
     protected function GetAccessToken() { }
     protected function RefreshAccessToken() { }

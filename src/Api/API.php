@@ -85,21 +85,31 @@ abstract class API
     const SET_AGENT_SCOPE   = '/cgi-bin/agent/set_scope';
     const SET_CONTACT_SYNC_SUCCESS = '/cgi-bin/sync/contact_sync_success';
 
-    //新增
+    #获取配置了客户联系功能的成员列表
     const GET_FOLLOW_USER_LIST  = '/cgi-bin/externalcontact/get_follow_user_list?access_token=ACCESS_TOKEN';
+    #批量获取客户
     const GET_BATCH_BY_USER     = '/cgi-bin/externalcontact/batch/get_by_user?access_token=ACCESS_TOKEN';
+    #企业客户标签
     const GET_CORP_TAG_List     = '/cgi-bin/externalcontact/get_corp_tag_list?access_token=ACCESS_TOKEN';
+    #获取客户详情
     const GET_EXTERNAL_CONTACT  = '/cgi-bin/externalcontact/get?access_token=ACCESS_TOKEN';
 
-    //活码
+    #添加联系我方式
     const ADD_CONTACT_WAY       = '/cgi-bin/externalcontact/add_contact_way?access_token=ACCESS_TOKEN';
+    #修改联系我方式
     const UPDATE_CONTACT_WAY    = '/cgi-bin/externalcontact/update_contact_way?access_token=ACCESS_TOKEN';
+    #删除联系我方式
     const DEL_CONTACT_WAY       = '/cgi-bin/externalcontact/del_contact_way?access_token=ACCESS_TOKEN';
 
-    const CONVERT_TO_USERID     = '/cgi-bin/user/convert_to_userid?access_token=ACCESS_TOKEN';
-    const DEP_SIMPLE_LIST       = '/cgi-bin/department/simplelist?access_token=ACCESS_TOKEN';
+    #将企业主体下的明文userid转换为服务商主体下的密文userid。
     const USERID_TO_OPENUSERID  = '/cgi-bin/batch/userid_to_openuserid?access_token=ACCESS_TOKEN';
+    #将企业主体下的external_userid转换为服务商主体下的external_userid
     const NEW_EXTERNAL_USERID   = '/cgi-bin/externalcontact/get_new_external_userid?access_token=ACCESS_TOKEN';
+
+    #发送欢迎语
+    const SEND_WELCOME_MSG      = '/cgi-bin/externalcontact/send_welcome_msg?access_token=ACCESS_TOKEN';
+    #获取会话内容存档开启成员列表
+    const GET_PERMIT_USER_LIST  = '/cgi-bin/msgaudit/get_permit_user_list?access_token=ACCESS_TOKEN';
 
     protected function GetAccessToken() { }
     protected function RefreshAccessToken() { }

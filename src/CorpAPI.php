@@ -1426,17 +1426,6 @@ class CorpAPI extends API
         ];
     }
 
-    public function convert_to_userid($params)
-    { 
-        
-        self::_HttpCall(self::CONVERT_TO_USERID, 'POST', $params);
-        return [
-            'userid_list' =>Utils::arrayGet($this->rspJson, "userid_list"),
-            'invalid_open_userid_list'   =>Utils::arrayGet($this->rspJson, "invalid_open_userid_list"),
-        ];
-    }
-
-
     public function userid_to_openuserid($params)
     { 
         self::_HttpCall(self::USERID_TO_OPENUSERID, 'POST', $params);
@@ -1451,6 +1440,19 @@ class CorpAPI extends API
         self::_HttpCall(self::NEW_EXTERNAL_USERID, 'POST', $params);
         return [
             'items'      =>Utils::arrayGet($this->rspJson, "items"),
+        ];
+    }
+
+    public function send_welcome($params)
+    { 
+        self::_HttpCall(self::SEND_WELCOME_MSG, 'POST', $params);
+    }
+
+    public function get_permit_user_list($params)
+    { 
+        self::_HttpCall(self::GET_PERMIT_USER_LIST, 'POST', $params);
+        return [
+            'ids'      =>Utils::arrayGet($this->rspJson, "ids"),
         ];
     }
 }

@@ -1455,4 +1455,20 @@ class CorpAPI extends API
             'ids'      =>Utils::arrayGet($this->rspJson, "ids"),
         ];
     }
+
+    public function add_intercept_rule($params)
+    { 
+        self::_HttpCall(self::ADD_INTERCEPT_RULE, 'POST', $params);
+        return Utils::arrayGet($this->rspJson, "rule_id");
+    }
+
+    public function update_intercept_rule($params)
+    { 
+        self::_HttpCall(self::UPDATE_INTERCEPT_RULE, 'POST', $params);
+    }
+
+    public function del_intercept_rule($params)
+    { 
+        self::_HttpCall(self::DEL_INTERCEPT_RULE, 'POST', $params);
+    }
 }

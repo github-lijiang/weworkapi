@@ -111,6 +111,13 @@ abstract class API
     #获取会话内容存档开启成员列表
     const GET_PERMIT_USER_LIST  = '/cgi-bin/msgaudit/get_permit_user_list?access_token=ACCESS_TOKEN';
 
+    #添加敏感词
+    const ADD_INTERCEPT_RULE    = '/cgi-bin/externalcontact/add_intercept_rule?access_token=ACCESS_TOKEN';
+    #修改敏感词
+    const UPDATE_INTERCEPT_RULE = '/cgi-bin/externalcontact/get_intercept_rule_list?access_token=ACCESS_TOKEN';
+    #删除敏感词
+    const DEL_INTERCEPT_RULE    = '/cgi-bin/externalcontact/get_intercept_rule?access_token=ACCESS_TOKEN';
+
     protected function GetAccessToken() { }
     protected function RefreshAccessToken() { }
 

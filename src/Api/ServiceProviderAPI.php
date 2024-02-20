@@ -190,4 +190,17 @@ class ServiceProviderAPI extends API
     { 
         self::_HttpCall(self::SET_CONTACT_SYNC_SUCCESS."?access_token={$access_token}", 'GET', null); 
     }
+
+    public function listActivedAccount($corpId,$cursor='')
+    { 
+        self::_HttpCall(self::LIST_ACTIVED_ACCOUNT, 'POST', [
+            'corpid'=>$corpId,
+            "cursor"=>$cursor
+        ]);
+        return [
+            'next_cursor'   =>Utils::arrayGet($this->rspJson, "next_cursor"),
+            'has_more'      =>Utils::arrayGet($this->rspJson, "has_more"),
+            'account_list'  =>Utils::arrayGet($this->rspJson, "account_list"),
+        ];
+    }
 }

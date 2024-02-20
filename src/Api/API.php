@@ -118,6 +118,9 @@ abstract class API
     #删除敏感词
     const DEL_INTERCEPT_RULE    = '/cgi-bin/externalcontact/get_intercept_rule?access_token=ACCESS_TOKEN';
 
+    #获取企业的账号列表
+    const LIST_ACTIVED_ACCOUNT  = '/cgi-bin/license/list_actived_account?provider_access_token=PROVIDER_ACCESS_TOKEN';
+
     protected function GetAccessToken() { }
     protected function RefreshAccessToken() { }
 

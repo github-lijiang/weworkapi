@@ -1419,11 +1419,12 @@ class CorpAPI extends API
 
     public function update_contact_way($params)
     { 
-        self::_HttpCall(self::ADD_CONTACT_WAY, 'POST', $params);
-        return [
-            'config_id' =>Utils::arrayGet($this->rspJson, "config_id"),
-            'qr_code'   =>Utils::arrayGet($this->rspJson, "qr_code"),
-        ];
+        self::_HttpCall(self::UPDATE_CONTACT_WAY, 'POST', $params);
+    }
+
+    public function del_contact_way($params)
+    { 
+        self::_HttpCall(self::DEL_CONTACT_WAY, 'POST', $params);
     }
 
     public function userid_to_openuserid($params)

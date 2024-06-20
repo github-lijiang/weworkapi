@@ -1017,9 +1017,12 @@ class CorpAPI extends API
      * @throws QyApiError
      * @throws SysError
      */
-    public function TicketGet()
+    public function TicketGet($type = [])
     {
-        self::_HttpCall(self::GET_TICKET, 'GET', array('type'=>'wx_card'));
+        if(!$type){
+            $type = array('type'=>'wx_card');
+        }
+        self::_HttpCall(self::GET_TICKET, 'GET', $type);
         return $this->rspJson["ticket"];
     }
 

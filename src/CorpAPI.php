@@ -1475,4 +1475,19 @@ class CorpAPI extends API
     { 
         self::_HttpCall(self::DEL_INTERCEPT_RULE, 'POST', $params);
     }
+
+    public function create_link($params)
+    { 
+        self::_HttpCall(self::CUSTPMER_ACQUISITION_CUSTOMER_CREATE_LINK, 'POST', $params);
+        return Utils::arrayGet($this->rspJson, "link");
+    }
+
+    public function customer($params)
+    { 
+        self::_HttpCall(self::CUSTPMER_ACQUISITION_CUSTOMER_CUSTOMER, 'POST', $params);
+        return [
+            'customer_list'      =>Utils::arrayGet($this->rspJson, "customer_list"),
+            'next_cursor'        =>Utils::arrayGet($this->rspJson, "next_cursor"),
+        ];
+    }
 }

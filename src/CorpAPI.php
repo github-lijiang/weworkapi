@@ -1490,4 +1490,22 @@ class CorpAPI extends API
             'next_cursor'        =>Utils::arrayGet($this->rspJson, "next_cursor"),
         ];
     }
+
+    public function sync_msg($params)
+    { 
+        self::_HttpCall(self::SYNC_MSG, 'POST', $params);
+        return $this->rspJson;
+    }
+
+    public function set_public_key($params)
+    { 
+        self::_HttpCall(self::SET_PUBNLIC_KEY, 'POST', $params);
+        return $this->rspJson;
+    }
+
+    public function sync_call_program($params)
+    { 
+        self::_HttpCall(self::SYNC_CALL_PROGRAM, 'POST', $params);
+        return $this->rspJson;
+    }
 }

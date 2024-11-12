@@ -121,11 +121,18 @@ abstract class API
     #获取企业的账号列表
     const LIST_ACTIVED_ACCOUNT  = '/cgi-bin/license/list_actived_account?provider_access_token=PROVIDER_ACCESS_TOKEN';
 
-     #创建获客链接
-     const CUSTPMER_ACQUISITION_CUSTOMER_CREATE_LINK   = '/cgi-bin/externalcontact/customer_acquisition/create_link?access_token=ACCESS_TOKEN';
-     #获取由获客链接添加的客户信息
-     const CUSTPMER_ACQUISITION_CUSTOMER_CUSTOMER      = '/cgi-bin/externalcontact/customer_acquisition/customer?access_token=ACCESS_TOKEN';
+    #创建获客链接
+    const CUSTPMER_ACQUISITION_CUSTOMER_CREATE_LINK   = '/cgi-bin/externalcontact/customer_acquisition/create_link?access_token=ACCESS_TOKEN';
+    #获取由获客链接添加的客户信息
+    const CUSTPMER_ACQUISITION_CUSTOMER_CUSTOMER      = '/cgi-bin/externalcontact/customer_acquisition/customer?access_token=ACCESS_TOKEN';
      
+    #设置公钥
+    const SET_PUBNLIC_KEY  = '/cgi-bin/chatdata/set_public_key?access_token=ACCESS_TOKEN';
+    #会话记录
+    const SYNC_MSG  = '/cgi-bin/chatdata/sync_msg?access_token=ACCESS_TOKEN';
+    #同步通话记录
+    const SYNC_CALL_PROGRAM  = '/cgi-bin/chatdata/sync_call_program?access_token=ACCESS_TOKEN';
+    
     protected function GetAccessToken() { }
     protected function RefreshAccessToken() { }
 

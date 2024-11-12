@@ -1508,4 +1508,10 @@ class CorpAPI extends API
         self::_HttpCall(self::SYNC_CALL_PROGRAM, 'POST', $params);
         return $this->rspJson;
     }
+    
+    public function get_auth_user_list($params)
+    { 
+        self::_HttpCall(self::GET_AUTH_USER_LIST, 'POST', $params);
+        return $this->rspJson;
+    }
 }

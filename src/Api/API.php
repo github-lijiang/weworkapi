@@ -132,6 +132,8 @@ abstract class API
     const SYNC_MSG  = '/cgi-bin/chatdata/sync_msg?access_token=ACCESS_TOKEN';
     #同步通话记录
     const SYNC_CALL_PROGRAM  = '/cgi-bin/chatdata/sync_call_program?access_token=ACCESS_TOKEN';
+    #获取授权存档的成员列表
+    const GET_AUTH_USER_LIST  = '/cgi-bin/chatdata/get_auth_user_list?access_token=ACCESS_TOKEN';
     
     protected function GetAccessToken() { }
     protected function RefreshAccessToken() { }

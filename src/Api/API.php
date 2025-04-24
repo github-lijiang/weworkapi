@@ -135,6 +135,13 @@ abstract class API
     #获取授权存档的成员列表
     const GET_AUTH_USER_LIST  = '/cgi-bin/chatdata/get_auth_user_list?access_token=ACCESS_TOKEN';
     
+    #获取企业的账号列表
+    const LIST_ID  = '/cgi-bin/user/list_id?access_token=ACCESS_TOKEN';
+    #获取企业的部门列表
+    const DEPARTMENT_SIMPLELIST = '/cgi-bin/department/simplelist?access_token=ACCESS_TOKEN';
+    #获取企业的部门列表
+    const DEPARTMENT_GET = '/cgi-bin/department/get?access_token=ACCESS_TOKEN';
+    
     protected function GetAccessToken() { }
     protected function RefreshAccessToken() { }
 

@@ -1514,4 +1514,30 @@ class CorpAPI extends API
         self::_HttpCall(self::GET_AUTH_USER_LIST, 'POST', $params);
         return $this->rspJson;
     }
+
+    public function user_id()
+    { 
+        self::_HttpCall(self::LIST_ID, 'POST', [
+            "cursor"=>'',
+	        "limit" =>10000
+        ]);
+        return $this->rspJson;
+    }
+
+    public function department_simplelist($id)
+    {         
+        self::_HttpCall(self::DEPARTMENT_SIMPLELIST, 'GET', [
+            "id"=>$id
+        ]);
+        return Utils::arrayGet($this->rspJson, "department_id");
+    }
+    
+    public function department_get($id)
+    {         
+        self::_HttpCall(self::DEPARTMENT_GET, 'GET', [
+            "id"=>$id
+        ]);
+        return $this->rspJson;
+        return Utils::arrayGet($this->rspJson, "department_id");
+    }
 }

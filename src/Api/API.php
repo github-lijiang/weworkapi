@@ -121,8 +121,12 @@ abstract class API
     #获取企业的账号列表
     const LIST_ACTIVED_ACCOUNT  = '/cgi-bin/license/list_actived_account?provider_access_token=PROVIDER_ACCESS_TOKEN';
 
+    #获取获客链接列表
+    const CUSTPMER_ACQUISITION_CUSTOMER_LIST_LINK     = '/cgi-bin/externalcontact/customer_acquisition/list_link?access_token=ACCESS_TOKEN';
     #创建获客链接
     const CUSTPMER_ACQUISITION_CUSTOMER_CREATE_LINK   = '/cgi-bin/externalcontact/customer_acquisition/create_link?access_token=ACCESS_TOKEN';
+    #删除获客链接
+    const CUSTPMER_ACQUISITION_CUSTOMER_DEL_LINK      = '/cgi-bin/externalcontact/customer_acquisition/delete_link?access_token=ACCESS_TOKEN';
     #获取由获客链接添加的客户信息
     const CUSTPMER_ACQUISITION_CUSTOMER_CUSTOMER      = '/cgi-bin/externalcontact/customer_acquisition/customer?access_token=ACCESS_TOKEN';
      
@@ -132,6 +136,11 @@ abstract class API
     const SYNC_MSG  = '/cgi-bin/chatdata/sync_msg?access_token=ACCESS_TOKEN';
     #同步通话记录
     const SYNC_CALL_PROGRAM  = '/cgi-bin/chatdata/sync_call_program?access_token=ACCESS_TOKEN';
+    
+    const SYNC_PROGRAM_TASK  = '/cgi-bin/chatdata/async_program_task?access_token=ACCESS_TOKEN';
+
+    const SYNC_PROGRAM_RESULT= '/cgi-bin/chatdata/async_program_result?access_token=ACCESS_TOKEN';
+
     #获取授权存档的成员列表
     const GET_AUTH_USER_LIST  = '/cgi-bin/chatdata/get_auth_user_list?access_token=ACCESS_TOKEN';
     

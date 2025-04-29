@@ -1476,9 +1476,21 @@ class CorpAPI extends API
         self::_HttpCall(self::DEL_INTERCEPT_RULE, 'POST', $params);
     }
 
+    public function link_list($params)
+    { 
+        self::_HttpCall(self::CUSTPMER_ACQUISITION_CUSTOMER_LIST_LINK, 'POST', $params);
+        return Utils::arrayGet($this->rspJson, "link");
+    }
+
     public function create_link($params)
     { 
         self::_HttpCall(self::CUSTPMER_ACQUISITION_CUSTOMER_CREATE_LINK, 'POST', $params);
+        return Utils::arrayGet($this->rspJson, "link");
+    }
+
+    public function del_link($params)
+    { 
+        self::_HttpCall(self::CUSTPMER_ACQUISITION_CUSTOMER_DEL_LINK, 'POST', $params);
         return Utils::arrayGet($this->rspJson, "link");
     }
 
@@ -1506,6 +1518,18 @@ class CorpAPI extends API
     public function sync_call_program($params)
     { 
         self::_HttpCall(self::SYNC_CALL_PROGRAM, 'POST', $params);
+        return $this->rspJson;
+    }
+
+    public function async_program_task($params)
+    { 
+        self::_HttpCall(self::SYNC_PROGRAM_TASK, 'POST', $params);
+        return $this->rspJson;
+    }
+
+    public function async_program_result($params)
+    { 
+        self::_HttpCall(self::SYNC_PROGRAM_RESULT, 'POST', $params);
         return $this->rspJson;
     }
     

@@ -1479,7 +1479,7 @@ class CorpAPI extends API
     public function link_list($params)
     { 
         self::_HttpCall(self::CUSTPMER_ACQUISITION_CUSTOMER_LIST_LINK, 'POST', $params);
-        return Utils::arrayGet($this->rspJson, "link");
+        return $this->rspJson;
     }
 
     public function create_link($params)
@@ -1491,7 +1491,7 @@ class CorpAPI extends API
     public function del_link($params)
     { 
         self::_HttpCall(self::CUSTPMER_ACQUISITION_CUSTOMER_DEL_LINK, 'POST', $params);
-        return Utils::arrayGet($this->rspJson, "link");
+        return $this->rspJson;
     }
 
     public function customer($params)

@@ -2,7 +2,6 @@
   "name": "lijiang/weworkapi",
   "description": "WeWork API SDK, 企业微信接口客户端SDK封装",
   "keywords": ["weWork"],
-  "version": "1.0.1",
   "license": "MIT",
   "minimum-stability": "dev",
   "homepage": "http://www.logme.cn/",

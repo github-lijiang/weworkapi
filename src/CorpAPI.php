@@ -1564,4 +1564,20 @@ class CorpAPI extends API
         return $this->rspJson;
         return Utils::arrayGet($this->rspJson, "department_id");
     }
+    
+    public function mark_tag($userid,$external_userid,$add_tag = [],$remove_tag = null)
+    {         
+        $data = [
+            "userid"=>$userid,
+            "external_userid"=>$external_userid,
+        ];
+        if(!empty($add_tag)){
+            $data['add_tag'] = $add_tag;
+        }
+        if(!empty($remove_tag)){
+            $data['remove_tag'] = $remove_tag;
+        }
+        self::_HttpCall(self::MARK_TAG, 'POST', $data);
+        return $this->rspJson;
+    }
 }

@@ -93,7 +93,8 @@ abstract class API
     const GET_CORP_TAG_List     = '/cgi-bin/externalcontact/get_corp_tag_list?access_token=ACCESS_TOKEN';
     #获取客户详情
     const GET_EXTERNAL_CONTACT  = '/cgi-bin/externalcontact/get?access_token=ACCESS_TOKEN';
-
+    #给客户打标签
+    const MARK_TAG              = '/cgi-bin/externalcontact/mark_tag?access_token=ACCESS_TOKEN';
     #添加联系我方式
     const ADD_CONTACT_WAY       = '/cgi-bin/externalcontact/add_contact_way?access_token=ACCESS_TOKEN';
     #修改联系我方式

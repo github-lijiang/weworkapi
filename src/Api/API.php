@@ -300,6 +300,7 @@ abstract class API
 
 
             $this->rspRawStr = HttpUtils::httpPost($realUrl, $postData);
+            $this->rspRawStr = mb_convert_encoding($this->rspRawStr, 'UTF-8', 'auto');
 
             if ( ! Utils::notEmptyStr($this->rspRawStr)) throw new QyApiError("empty response"); 
 

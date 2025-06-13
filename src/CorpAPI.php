@@ -1580,4 +1580,15 @@ class CorpAPI extends API
         self::_HttpCall(self::MARK_TAG, 'POST', $data);
         return $this->rspJson;
     }
+
+    public function remark($userid,$external_userid,$remark = null)
+    {         
+        $data = [
+            "userid"=>$userid,
+            "external_userid"=>$external_userid,
+            "remark"=>$remark,
+        ];
+        self::_HttpCall(self::REMARK, 'POST', $data);
+        return $this->rspJson;
+    }
 }

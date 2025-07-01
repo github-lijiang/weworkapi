@@ -132,7 +132,14 @@ abstract class API
     const CUSTPMER_ACQUISITION_CUSTOMER_DEL_LINK      = '/cgi-bin/externalcontact/customer_acquisition/delete_link?access_token=ACCESS_TOKEN';
     #获取由获客链接添加的客户信息
     const CUSTPMER_ACQUISITION_CUSTOMER_CUSTOMER      = '/cgi-bin/externalcontact/customer_acquisition/customer?access_token=ACCESS_TOKEN';
-     
+    #添加标签
+    const ADD_CORP_TAG  = '/cgi-bin/externalcontact/add_corp_tag?access_token=ACCESS_TOKEN';
+    #编辑标签
+    const EDIT_CORP_TAG  = '/cgi-bin/externalcontact/edit_corp_tag?access_token=ACCESS_TOKEN';
+    #删除标签
+    const DEL_CORP_TAG  = '/cgi-bin/externalcontact/del_corp_tag?access_token=ACCESS_TOKEN';
+    #获取标签列表
+    const GET_CORP_TAG_LIST  = '/cgi-bin/externalcontact/get_corp_tag_list?access_token=ACCESS_TOKEN';
     #设置公钥
     const SET_PUBNLIC_KEY  = '/cgi-bin/chatdata/set_public_key?access_token=ACCESS_TOKEN';
     #会话记录

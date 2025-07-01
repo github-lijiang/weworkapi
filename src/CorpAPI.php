@@ -1591,4 +1591,22 @@ class CorpAPI extends API
         self::_HttpCall(self::REMARK, 'POST', $data);
         return $this->rspJson;
     }
+
+    public function add_corp_tag($data)
+    {         
+        self::_HttpCall(self::ADD_CORP_TAG, 'POST', $data);
+        return $this->rspJson;
+    }
+
+    public function edit_corp_tag($data)
+    {         
+        self::_HttpCall(self::EDIT_CORP_TAG, 'POST', $data);
+        return $this->rspJson;
+    }
+
+    public function del_corp_tag($data)
+    {       
+        self::_HttpCall(self::DEL_CORP_TAG, 'POST', $data);
+        return $this->rspJson;
+    }
 }
